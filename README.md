@@ -27,14 +27,21 @@ options:
                         on:  always from the perspective of the black player
                         if no options selected, auto is used
 
+--hide-mover            hides the move-indicator right of the chessboard
+
+--with-text            Writes a Title above the Chessboard, consisting of the PGN-Headers White, Black, Result, Event, Site and Date.
+
 
 Example:
 
 ```
-python pgn2tex/puzzles.py --template pgn2tex/templates/book.tex --front-page pgn2tex/templates/frontpage_puzzles.pdf  --output examples/puzzles.tex
-cd examples
-xelatex puzzles.tex
-xelatex puzzles.tex # for table of contents
+python fen2tex.py 2025_C_MattbilderGrecoSMS_AF.pgn -o MattbilderGreco.tex --inverse off --hide-mover
+xelatex MattbilderGreco.tex
+
+
+
+
+
 ```
 
 
