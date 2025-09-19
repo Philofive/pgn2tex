@@ -1,12 +1,16 @@
 # pgn2tex
-Python Konverter(s) from pgn to tex via python-library chess. First release of fen2tex.y was part of a "homework"-project for an austrian chess-trainer-course.
+Python Konverter(s) from pgn to tex 
+
 
 ### requirements
-Any recent python installation suffices.
+Any recent python installation suffices. The only library outside is the  python-library chess.
 
 pip install -r requirements.txt
 
 ## Fen2Tex 
+Input: PGN-files or valid FEN-keys
+Output: .tex-file which should be compiled via XeLaTeX
+First release of fen2tex.y was part of a "homework"-project for an austrian chess-trainer-course.
 
 ### Usage
 ```
@@ -44,10 +48,3 @@ xelatex 2025_C_MattbilderGrecoSMS_AF.tex
 python fen2tex.py 2025_C_MattbilderGrecoSMS_AF.pgn -o 2025_C_MattbilderGrecoSMS_AF_anderes_Ausgabeformat.tex --with-text
 xelatex 2025_C_MattbilderGrecoSMS_AF_anderes_Ausgabeformat.tex
 
-
-```
-
-
-  
-  -o OUTPUT, --output OUTPUT
-```
