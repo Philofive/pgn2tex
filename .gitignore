@@ -1,3 +1,34 @@
+## Python files
+
+# Bytecode und Cache
+__pycache__/
+*.py[cod]
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+
+# Virtuelle Umgebungen
+.venv/
+venv/
+ENV/
+
+# Logs & temporäre Dateien
+*.log
+*.tmp
+
+# Jupyter Notebook Checkpoints (falls Notebooks dabei sind)
+.ipynb_checkpoints/
+
+# Editor-spezifisches (optional, je nach Editor/IDE)
+.vscode/
+.idea/
+*.swp
+
+
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
