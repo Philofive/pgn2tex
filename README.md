@@ -12,8 +12,8 @@ pip install -r requirements.txt
 ```
 > python pgn2tex/fen2tex.py --help
 
-Convert a PGN file to a latex document. It is supposed to be used to create chess diagrams from PGN files with FEN-Keys only, as it is often used for training exercises
-6 diagrams per A4-page
+converts a PGN file to a latex document. It is supposed to be used to create chess diagrams from PGN files with FEN-Keys only, as it is often used for training exercises.
+6 diagrams per A4-page as a standard, but adjustable
 
 positional arguments:
   file                  PGN File to parse
@@ -31,15 +31,16 @@ options:
 
 --with-text            Writes a Title above the Chessboard, consisting of the PGN-Headers White, Black, Result, Event, Site and Date.
 
-
-Example:
+```
+Examples:
 
 ```
-python fen2tex.py 2025_C_MattbilderGrecoSMS_AF.pgn -o MattbilderGreco.tex --inverse off --hide-mover
-xelatex MattbilderGreco.tex
+python fen2tex.py 2025_C_MattbilderGrecoSMS_AF.pgn -o 2025_C_MattbilderGrecoSMS_AF.tex --inverse off --hide-mover
+xelatex 2025_C_MattbilderGrecoSMS_AF.tex
 
 
-
+python fen2tex.py 2025_C_MattbilderGrecoSMS_AF.pgn -o 2025_C_MattbilderGrecoSMS_AF_anderes_Ausgabeformat.tex --with-text
+xelatex 2025_C_MattbilderGrecoSMS_AF_anderes_Ausgabeformat.tex
 
 
 ```
