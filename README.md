@@ -6,30 +6,32 @@ Any recent python installation suffices.
 
 pip install -r requirements.txt
 
-### Usage
+## Fen2Tex 
 
-#### Fen2Tex 
+### Usage
 ```
 > python pgn2tex/fen2tex.py --help
 
-converts a PGN file to a latex document. It is supposed to be used to create chess diagrams from PGN files with FEN-Keys only, as it is often used for training exercises.
-6 diagrams per A4-page as a standard, but adjustable
+usage: fen2tex.py [-h] [-o OUTPUT] [--fen FEN] [--fontsize FONTSIZE] [--rows-per-page ROWS_PER_PAGE] [--inverse {auto,on,off}] [--with-text] [--cellheight CELLHEIGHT] [--hide-mover] [input]
+
+PGN/FEN → TeX with xskak+chessboard, grid, Optionen inverse/hide-mover/with-text.
 
 positional arguments:
-  file                  PGN File to parse
+  input                 PGN-file (dont use it with --fen)
 
 options:
   -h, --help            show this help message and exit
-  
-  --inverse {auto, on, off}
-                        auto: inverts the board automatically for each position, when it is Black to move.
-                        off: always from the perspective of the white player
-                        on:  always from the perspective of the black player
-                        if no options selected, auto is used
-
---hide-mover            hides the move-indicator right of the chessboard
-
---with-text            Writes a Title above the Chessboard, consisting of the PGN-Headers White, Black, Result, Event, Site and Date.
+  -o, --output OUTPUT   target.tex
+  --fen FEN             FEN-key instead of PGN
+  --fontsize FONTSIZE   boardfontsize in pt (default: 20)
+  --rows-per-page ROWS_PER_PAGE
+                        rows/diagrams per-page (default: 3 ⇒ 6 diagrams/page)
+  --inverse {auto,on,off}
+                        auto: inverts the board automatically for each position, when it is Black to move (default: auto)
+  --with-text           title above the chessboard, consisting of the PGN-Headers
+  --cellheight CELLHEIGHT
+                        (only with --with-text) fixed cell height in cm (default: 8.2)
+  --hide-mover          showmover=false (hides the move-indicator)
 
 ```
 Examples:
