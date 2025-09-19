@@ -9,7 +9,9 @@ pip install -r requirements.txt
 
 ## Fen2Tex 
 Input: PGN-files or valid FEN-keys
+
 Output: .tex-file which should be compiled via XeLaTeX
+
 First release of fen2tex.y was part of a "homework"-project for an austrian chess-trainer-course.
 
 ### Usage
