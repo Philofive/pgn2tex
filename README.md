@@ -50,3 +50,50 @@ xelatex 2025_C_MattbilderGrecoSMS_AF.tex
 python fen2tex.py 2025_C_MattbilderGrecoSMS_AF.pgn -o 2025_C_MattbilderGrecoSMS_AF_anderes_Ausgabeformat.tex --with-text
 xelatex 2025_C_MattbilderGrecoSMS_AF_anderes_Ausgabeformat.tex
 
+
+```
+
+## Pgn2Tex_start_sol.py 
+Input: PGN-files or valid FEN-keys
+
+
+### Usage
+
+usage: pgn2tex_start_sol.py [-h] [--mode {start,start+solution}] [-o OUTPUT] [--fontsize FONTSIZE] [--inverse {auto,on,off}] [--hide-mover] [--with-text] [--cellheight CELLHEIGHT] [--rows-per-page ROWS_PER_PAGE]
+                            [--notation {english,german,symbols}] [--debug]
+                            input
+
+positional arguments:
+  input                 PGN-Datei
+
+options:
+  -h, --help            show this help message and exit
+  --mode {start,start+solution}
+                        Ausgabemodus (Default: start)
+  -o, --output OUTPUT   Zieldatei .tex (Default abhängig vom Modus)
+  --fontsize FONTSIZE   boardfontsize in pt (Default: 20)
+  --inverse {auto,on,off}
+                        Brettdrehung: auto|on|off (Default: auto)
+  --hide-mover          chessboard: showmover=false
+  --with-text           Titel/Untertitel über dem Brett
+  --cellheight CELLHEIGHT
+                        Zellhöhe in cm (Default: 8.2)
+  --rows-per-page ROWS_PER_PAGE
+                        Zeilen pro Spalte (Default: 3 ⇒ 6/Seite)
+  --notation {english,german,symbols}
+                        Figurennotation in der Lösung: english|german|symbols (Default: symbols)
+  --debug               Debug-Ausgaben (FEN je Partie) auf STDERR
+
+```
+
+Examples:
+
+```
+python fen2tex_start_sol.py 2025_C_MattbilderGrecoSMS_AF.pgn  --mode start -o 025_C_MattbilderGrecoSMS_AF_start.tex
+
+python pgn2tex_start_sol.py 2025_C_MattbilderGrecoSMS_AF.pgn  --mode start+solution --notation symbols -o 025_C_MattbilderGrecoSMS_AF_start+solution+symbols.tex
+
+```
+
+
+
