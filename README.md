@@ -58,7 +58,7 @@ Input: PGN-files or valid FEN-keys
 
 
 ### Usage
-
+```
 usage: pgn2tex_start_sol.py [-h] [--mode {start,start+solution}] [-o OUTPUT] [--fontsize FONTSIZE] [--inverse {auto,on,off}] [--hide-mover] [--with-text] [--cellheight CELLHEIGHT] [--rows-per-page ROWS_PER_PAGE]
                             [--notation {english,german,symbols}] [--debug]
                             input
